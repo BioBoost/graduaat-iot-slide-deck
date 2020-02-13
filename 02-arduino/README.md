@@ -11,6 +11,12 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 ---
 
+# Doel
+
+Korte introductie in Arduino en installeren van de IDE.
+
+---
+
 # Arduino
 
 Arduino is een open-source hardware- en softwarebedrijf, project- en gebruikersgemeenschap die microcontrollerborden en shields ontwerpt en produceert voor het bouwen van digitale apparaten.

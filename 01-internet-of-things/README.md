@@ -19,6 +19,12 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 ---
 
+# Doel
+
+Korte introductie in IoT
+
+---
+
 # The Internet of Things
 
 Het internet der dingen (Internet of Things - IoT) bestaat uit apparaten - van eenvoudige sensoren tot smartphones en wearables - met elkaar verbonden.
