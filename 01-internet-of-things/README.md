@@ -21,7 +21,9 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 # Doel
 
-Korte introductie in IoT
+Kennis maken met het begrip IoT
+
+![bg right fit](./img/goal.jpg)
 
 ---
 
@@ -128,7 +130,6 @@ Het internet der dingen (Internet of Things - IoT) bestaat uit apparaten - van e
 * Smart-cities
 
 ---
-
 
 ![bg fit](./img/wasmachine.jpg)
 

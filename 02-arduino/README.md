@@ -13,7 +13,9 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 # Doel
 
-Korte introductie in Arduino en installeren van de IDE.
+Kennis maken met het Arduino en installeren van de IDE van Arduino.
+
+![bg right fit](./img/goal.jpg)
 
 ---
 
