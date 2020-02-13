@@ -169,7 +169,7 @@ De sketch wordt na het opladen of het inpluggen van de voeding direct gestart.
 # Benamingen pinnen
 
 | Beschrijving | Benaming |
-| --- | --- | --- |
+| --- | --- |
 | RGB Red LED | LED_RED |
 | RGB Green LED | LED_GREEN |
 | RGB Blue LED | LED_BLUE |
