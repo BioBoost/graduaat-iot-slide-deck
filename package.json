@@ -1,0 +1,9 @@
+{
+  "name": "iot-oop-slidedeck",
+  "version": "1.0.0",
+  "description": "Introductie in IoT voor de graduaat opleiding van VIVES",
+  "main": "index.js",
+  "repository": "https://github.com/BioBoost/graduaat-iot",
+  "author": "Nico De Witte <nico.dewitte@vives.be>",
+  "license": "MIT"
+}
