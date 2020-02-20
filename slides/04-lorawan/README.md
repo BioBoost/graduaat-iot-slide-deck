@@ -364,3 +364,63 @@ void send_with_lorawan(unsigned int size) {
 De volledige code kan je vinden op GitHub: [https://github.com/BioBoost/graduaat-iot-slide-deck](https://github.com/BioBoost/graduaat-iot-slide-deck). Dan navigeren naar `code/04-lorawan/hello-world-temperature/`.
 
 ---
+
+### The Things Network Decoder
+
+Wanneer de data op de TTN binnenkomt dan zijn dit ruwe bytes. Dit is vrij low-level en zou de eindapplicatie dwingen om de ruwe data om te zetten naar eigenlijke informatie. We kunnen dit proces door de TTN laten doen. Dit maakt debuggen makkelijker en zorgt er ook voor dat een applicatie die gebruik wil maken van de data dit niet meer hoeft te doen.
+
+---
+
+### The Things Network Decoder
+
+Open je applicatie op de [console](https://console.thethingsnetwork.org/applications) van The Things Network.
+
+![Console TTN](./img/ttn-application.png)
+
+Klik bovenaan rechts op `Payload Formats`.
+
+---
+
+### The Things Network Decoder
+
+We kunnen nu in het venster een stukje JavaScript code plaatsen die de raw bytes omzet naar een meer leesbaar en verwerkbaar formaat. Typisch gebruiken we voor deze dingen JSON.
+
+![TTN Empty Decoder](./img/ttn-decoder-empty.png)
+
+---
+
+### The Things Network Decoder
+
+Kopieer onderstaande JavaScript code en plaats dit in het `decoder` venster.
+
+```js
+function Decoder(bytes, port) {
+  // Decode an uplink message from a buffer
+  // (array) of bytes to an object of fields.
+  var decoded = {};
+
+  if (port === 1) {
+    decoded.temperature = ((bytes[0] << 8) + bytes[1])/100.0;
+  }
+
+  return decoded;
+}
+```
+
+Ook terug te vinden op GitHub: [https://github.com/BioBoost/graduaat-iot-slide-deck](https://github.com/BioBoost/graduaat-iot-slide-deck). Dan navigeren naar `code/04-lorawan/hello-world-temperature/`.
+
+---
+
+### The Things Network Decoder
+
+![Console TTN](./img/ttn-decoder-temperature.png)
+
+Klik vervolgens op `Save`.
+
+---
+
+### The Things Network Decoder
+
+De data zou nu moeten worden voorgesteld in JSON formaat:
+
+![JSON Decoder](./img/ttn-decoded-json-data.png)
