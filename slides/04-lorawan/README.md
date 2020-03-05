@@ -222,7 +222,7 @@ uint8_t buffer[SIZE_OF_BUFFER];
 //**********************************************************
 // De spread factor waarmee we zenden
 //**********************************************************
-const int SPREAD_FACTOR = 7
+const int SPREAD_FACTOR = 7;
 ```
 
 ---
@@ -337,7 +337,7 @@ void send_with_lorawan(unsigned int size) {
     return;
   }
 
-  switch (LoRaBee.send(LORAWAN_PORT, buffer, numberOfDataBytes))
+  switch (LoRaBee.send(LORAWAN_PORT, buffer, size))
   {
     case NoError:
       debugSerial.println("Packet succesvol verzonden");
