@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-title: Arduino
+title: LoRaWAN
 ---
 
 # <!-- fit --> LoRaWAN
