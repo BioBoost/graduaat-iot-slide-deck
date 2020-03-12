@@ -221,4 +221,125 @@ Voor een device met id `sodaq-temperature-sensor` wordt dit dus: `+/devices/soda
 
 ![bg fit right](./img/mqtt-topic-configured.png)
 
+---
 
+# MQTT In - Output als JS Object
+
+Als laatste dienen we de mqtt node `Output` ook in te stellen zodat deze een JavaScript object terug geeft in plaats van een pure JSON string. Dit laat ons toe om later makkelijker te filteren. Selecteer als output `A parsed JSON Object`.
+
+Klik als laatste bovenaan rechts op `Done`.
+
+![bg fit right](./img/mqtt-output.png)
+
+---
+
+![bg 90%](./img/mqtt-in-configured.png)
+
+---
+
+# Deployen van de flow
+
+Klik bovenaan helemaal rechts op `Deploy` om de flow te activeren. Telkens je een aanpassing doet aan de flow dien je deze opnieuw te deployen.
+
+![bg fit right](./img/deploy-flow.png)
+
+---
+
+# MQTT - Connected
+
+Indien alles goed is verlopen zou er nu onder `mqtt input` node `connected` moeten staan.
+
+![bg fit right](./img/mqtt-connected.png)
+
+---
+
+# Show Debug Messages
+
+Indien je nu op het kleine debug beestje klikt rechts bovenaan in Node RED dan zou je reeds data moeten zien binnenkomen van je sensor.
+
+![bg fit left:40%](./img/enable-debug.png)
+
+---
+
+# Data zonder sensoren
+
+Als je geen sensor hebt kan je toch data *faken* door naar de console van The Things Network te surfen en naar jouw device te gaan.
+
+Daar heb je dan de sectie `Simulate Uplink`. Hier kan je een raw byte payload ingeven. Bv.: `06 BD 22`. Dit komt overeen met een temperatuur van `17.25` en een batterij percentage van `34`.
+
+---
+
+# Data zonder sensoren
+
+![](./img/fake-data.png)
+
+Klik op `Send` om de data te simuleren. Je zou dit vervolgens moeten zien binnenkomen in  Node-RED.
+
+---
+
+# Payload Fields
+
+Zoals te zien in de figuur zit onze data gedecodeerd in het veld `payload_fields`. Dit komt er zo in te staan doordat we een decoder op de TTN hebben ingesteld voor onze data.
+
+![bg fit right](./img/too-much-data.png)
+
+---
+
+# Filteren - Te veel data
+
+Op dit moment krijgen we niet enkel onze data binnen van de TTN maar ook allerlei metadata (`app_id`, `dev_id`, `port`, `counter`).
+
+We dienen eerst onze data (die zich bevind onder `payload_fields`) er uit te filteren vooraleer deze verder kan verwerkt worden.
+
+![bg fit right](./img/too-much-data.png)
+
+---
+
+# Filteren - Te veel data
+
+Hiervoor kan je gebruik maken van de algemene `function node`.
+
+![](./img/function-node.png)
+
+Als je hier op dubbelklikt kan je een stukje JavaScript code bouwen om uit te voeren.
+
+---
+
+# Filteren - Temperatuur
+
+Om het payload field met de temperatuur eruit te filteren kan volgende code wordt gebruikt.
+
+```js
+msg.payload = msg.payload.payload_fields.temperature;
+return msg;
+```
+
+Geef de node best een goede `Name` zoals `Filter temperatuur`.
+
+![](./img/filter-temperature.png)
+
+---
+
+# Filteren - Temperatuur
+
+Als je op `Done` klikt kan je nu de `function` node verbinden met de `mqtt input` node. Het is ook een goed idee om aan de uitgang van de `function` node een `debug` node te hangen zoals in de figuur. Dit laat toe de output te bekijken.
+
+![](./img/filter-temperature-debug.png)
+
+---
+
+# Filteren - Temperatuur
+
+Als je de flow deployed en opnieuw via de console van de TTN data simuleert zou het effect moeten te zien zijn in Node-RED debug.
+
+Merk op dat we de temperatuur nu apart krijgen.
+
+![bg fit right](./img/temperature-debug.png)
+
+---
+
+# Oefening - Batterij percentage
+
+Probeer nu hetzelfde voor de batterij. Je zou volgende resultaat moeten bekomen.
+
+![](./img/challenge-battery.png)
