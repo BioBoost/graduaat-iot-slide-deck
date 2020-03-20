@@ -13,3 +13,10 @@ Start container after reboot or something:
 ```bash
 docker start -ai /mynodered
 ```
+
+Start container and remove on exit:
+
+```bash
+docker run -it --rm -p 1880:1880 nodered/node-red
+
+```
