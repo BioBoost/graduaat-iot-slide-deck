@@ -55,7 +55,7 @@ Klik op `Install` wanneer het dialoogvenster tevoorschijn komt.
 
 ![bg fit right](./img/install.png)
 
-----
+---
 
 # Installeren Node-RED Dashboard
 
@@ -64,3 +64,62 @@ Als alles gelukt is zou er nu naast de module `Installed` moeten verschijnen.
 Klik op Close om de overlay te sluiten en terug te keren naar de flow-editor.
 
 ![bg fit right](./img/installed.png)
+
+---
+
+# Node-RED Dashboard Nodes
+
+In Node-RED vind je nu rechts tussen de andere nodes de categorie `dashboard`. Je vindt hier allerhande nodes voor grafische input en output via het dashboard.
+
+![bg fit right:35%](./img/nodes.png)
+
+---
+
+# Raadplegen Dashboard
+
+Het dashboard kan je raadplegen door te surfen naar de URL [http://localhost:1880/ui](http://localhost:1880/ui). Merk op dat dit gewoon de URL is Node-RED met `/ui` erachter (ui = user interface).
+
+Voorlopig krijg je de melding dat er nog geen dashboard bestaat.
+
+![bg fit left](./img/empty-dashboard.png)
+
+---
+
+# Introductie Node-RED Dashboard
+
+Bekijk volgend filmpje vanaf **2min06** om de basis van Node-RED Dashboard te leren kennen:
+
+[https://www.youtube.com/watch?v=X8ustpkAJ-U](https://www.youtube.com/watch?v=X8ustpkAJ-U)
+
+Volg mee voor het bouwen van een flow en dashboard (doe dit in een nieuw werkblad). Klik bovenaan rechts op het plusje `+` om een nieuwe flow te maken.
+
+Speel ook even zelf met de componenten.
+
+![bg fit left:25%](./img/opdracht.png)
+
+---
+
+# Korte Samenvatting - Grafische Componenten
+
+* Een dashboard bestaat uit grafische componenten die data afbeelden en interactie met de gebruiker toelaten.
+  * Denk maar aan grafieken, knoppen, textinvoer, ...
+
+![bg fit right](./img/ui-components.png)
+![](./img/ui-components-temperatuur.png)
+
+
+---
+
+# Korte Samenvatting - Groups en Tabs
+
+* De grafische elementen worden ingedeeld in groepen (groups) en deze worden afgebeeld op een tabblad (tabs).
+  * De groups en tabs kan je beheren via de Layout manager (rechts bovenaan de dashboard knop).
+
+![bg fit right](./img/tabs-groups-manager.png)
+
+---
+
+# Dashboard bouwen voor TTN
+
+Tijd om een dashboard te bouwen voor onze applicatie (batterij monitoring systeem).
+
