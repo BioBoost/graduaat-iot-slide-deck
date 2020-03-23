@@ -116,7 +116,7 @@ void ready_battery_for_sending()
 {
     double sum = 0;
     for (unsigned int i = 0; i < NUMBER_OF_SAMPLES; i++) {
-      sum += analogRead(VOLTAGE_PIN) * REF_VOLTAGE / ((1 << ADC_BITS) - 1) * VOLTAGE_DIVIDER;
+      sum += analogRead(VOLTAGE_PIN) * REF_VOLTAGE / ((1 << ADC_BITS)) * VOLTAGE_DIVIDER;
       delay(10);
     }
     double voltage = sum / NUMBER_OF_SAMPLES;
