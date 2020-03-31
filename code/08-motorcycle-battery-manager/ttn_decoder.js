@@ -8,7 +8,7 @@ function Decoder(bytes, port) {
     decoded.battery.temperature = ((bytes[0] << 8) + bytes[1])/100.0;
     decoded.battery.percentage = bytes[2];
     decoded.battery.is_healthy = (bytes[3] !== 0);
-    decoded.battery.voltage = ((bytes[4] << 8) + bytes[5])/100.0;
+    decoded.battery.voltage = ((bytes[4] << 8) + bytes[5])/1000.0;
     decoded.cooling_water_level = bytes[6];
     decoded.movement = {};
     decoded.movement.is_moving = (bytes[6] == 0xFF);
