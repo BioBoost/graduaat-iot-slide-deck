@@ -115,20 +115,6 @@ Open een browser en surf naar [http://127.0.0.1:1880](http://127.0.0.1:1880).
 
 ---
 
-# ???????
-
-Merk op dat een node die data genereert (uitvoer) aan de rechterkant kan gekoppeld worden en een node die data binnen neemt (invoer) aan de linkerkant gekoppeld kan worden.
-
----
-
-# ???????
-
----
-
-# ???????
-
----
-
 # Data van TTN binnenhalen
 
 Om data van The Things Network binnen te halen dient er een flow gebouwd te worden. De connectie met TTN wordt gemaakt aan de hand van MQTT.
@@ -174,6 +160,14 @@ Zoek de node `mqtt input` in de lijst aan de linker kant, en sleep deze naar het
 Vervolgens kunnen we ook een `debug` node aan de uitgang van de `mqtt input` node koppelen zodat we de informatie makkelijk kunnen raadplegen die van The Things Network komt.
 
 ![bg fit right](./img/mqtt-in-debug.png)
+
+---
+
+# Nodes - Input / Output
+
+Merk op dat een node die data genereert (uitvoer) aan de rechterkant kan gekoppeld worden en een node die data binnen neemt (invoer) aan de linkerkant gekoppeld kan worden.
+
+![](./img/mqtt-in-debug.png)
 
 ---
 
