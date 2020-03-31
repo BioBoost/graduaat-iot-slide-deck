@@ -16,6 +16,7 @@ function Decoder(bytes, port) {
     decoded.controller = {};
     decoded.controller.send_messages = ((bytes[10] << 24) + (bytes[11] << 16) + (bytes[12] << 8) + bytes[13]);
     decoded.controller.failed_messages = ((bytes[14] << 24) + (bytes[15] << 16) + (bytes[16] << 8) + bytes[17]);
+    decoded.firmware_id = bytes[18];
   }
 
   return decoded;

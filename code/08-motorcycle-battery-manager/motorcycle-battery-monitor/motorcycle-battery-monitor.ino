@@ -46,6 +46,7 @@ const double VOLTAGE_RANGE = FULL_VOLTAGE - DEPLETED_VOLTAGE;
 //**********************************************************
 long unsigned numberOfSendMessage = 0;
 long unsigned numberOfFailedMessages = 0;
+#define FIRMWARE_ID 0x05
 
 //**********************************************************
 // De setup van Arduino, wordt in het begin 1x uitgevoerd.
@@ -94,10 +95,11 @@ void loop()
   ready_battery_for_sending();
   ready_cooling_water_level();
   ready_motorcycle_state();
+  ready_firmware_id();
 
   // Verzenden met LoRaWAN
   digitalWrite(LED_BUILTIN, HIGH);
-  send_with_lorawan(18);     // 6 bytes in buffer
+  send_with_lorawan(19);     // 6 bytes in buffer
 
   // Tijd om te wachten (milliseconden)
   delay(20000);
@@ -220,6 +222,12 @@ void ready_controller_stats() {
   buffer[15] = (numberOfFailedMessages >> 16) & 0xFF;
   buffer[16] = (numberOfFailedMessages >> 8) & 0xFF;
   buffer[17] = (numberOfFailedMessages >> 0) & 0xFF;
+}
+
+void ready_firmware_id(void) {
+  debugSerial.print("Firmware Version ID: ");
+  debugSerial.println(FIRMWARE_ID);
+  buffer[18] = FIRMWARE_ID;
 }
 
 //**********************************************************
