@@ -11,6 +11,14 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 ---
 
+# Video
+
+Bij deze slides hoort een video die je ook kan volgen. Je kan deze terug vinden op YouTube:
+
+[https://youtu.be/u49m035Bt-8](https://youtu.be/u49m035Bt-8)
+
+---
+
 # Doel
 
 Koppeling maken met de TTN App van de docent vanuit Node-RED en dan ook bouwen van een dashboard. Je verslag is hier de leidraad in.
