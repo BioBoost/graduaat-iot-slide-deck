@@ -15,7 +15,7 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 Bij deze slides hoort een video die je ook kan volgen. Je kan deze terug vinden op YouTube:
 
-<!-- [https://youtu.be/u49m035Bt-8](https://youtu.be/u49m035Bt-8) -->
+[https://youtu.be/DmNpo25QAv4](https://youtu.be/DmNpo25QAv4)
 
 ---
 
