@@ -4,7 +4,7 @@ paginate: true
 title: A Basic Calculator
 ---
 
-# <!-- fit --> Publishing to MQTT
+# <!-- fit --> Publishing to MQTT from NodeRED
 
 Nico De Witte
 bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
