@@ -805,7 +805,7 @@ Dispatcher.Invoke(delegate
 
 Normaal zou je nu data op de grafiek moeten zien verschijnen na een tijd. Het is niet de meest fancy grafiek ooit, maar het is een mooi begin.
 
-TODO: Screenshot
+![bg fit left:65%](./img/final-result.png)
 
 ---
 
