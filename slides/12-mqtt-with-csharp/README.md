@@ -813,7 +813,6 @@ Normaal zou je nu data op de grafiek moeten zien verschijnen na een tijd. Het is
 
 Een laatste klein puntje is dat het wel spijtig is dat je altijd even moet wachten vooraleer je iets ziet van data. Dit kunnen we eigenlijk nog makkelijk en snel oplossen in NodeRED.
 
-Daar hoef je enkel bij je publish (`mqtt out` nodes) de eigenschap `Retain` op `True` te zetten. Dit zorgt er voor dat de eerste keer dat een client subscribed hij direct de laatst gepublishte waarde toegestuurd krijgt.
+Daar hoef je enkel bij je publish (`mqtt out` nodes) de eigenschap `Retain` op `true` te zetten. Dit zorgt er voor dat de eerste keer dat een client subscribed hij direct de laatst gepublishte waarde toegestuurd krijgt.
 
-TODO: Screenshot
-
+![bg fit right:40%](./img/retain-flag.png)
