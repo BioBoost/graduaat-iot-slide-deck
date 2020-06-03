@@ -816,3 +816,17 @@ Een laatste klein puntje is dat het wel spijtig is dat je altijd even moet wacht
 Daar hoef je enkel bij je publish (`mqtt out` nodes) de eigenschap `Retain` op `true` te zetten. Dit zorgt er voor dat de eerste keer dat een client subscribed hij direct de laatst gepublishte waarde toegestuurd krijgt.
 
 ![bg fit right:40%](./img/retain-flag.png)
+
+---
+
+# Opdracht
+
+Als laatste opdracht dien je de applicatie nog uit te breiden met minimaal 2 waarden die je eveneens via MQTT pusht vanuit NodeRED.
+
+Kies 2 parameters uit de data die worden verzonden via LoRaWAN. Je hoeft deze niet in een grafiek weer te geven. Een `TextBlock` is genoeg. Zorg wel dat elke parameter op zijn eigen topic terecht komt onder jouw naam.
+
+Indien je echter graag experimenteert met de grafieken mag je het gerust proberen. Of als je nog een betere library of manier hebt om data te visualiseren. Be my guest.
+
+Ook mag je de stijl van de applicatie altijd wat opfleuren voor een extra puntje :).
+
+**Deadline: vrijdag 12 juni om 23u59**
