@@ -1,7 +1,7 @@
 ---
 marp: true
 paginate: true
-title: A Basic Calculator
+title: Publishing to MQTT from NodeRED
 ---
 
 # <!-- fit --> Publishing to MQTT from NodeRED
