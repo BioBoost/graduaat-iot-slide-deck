@@ -11,6 +11,15 @@ bereikbaar via [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
 
 ---
 
+# Videos
+
+Bij deze slides horen twee video's die je ook kan volgen. Je kan deze terug vinden op YouTube:
+
+* [MQTT from C# - Part 1](https://youtu.be/6vWoMiRH_nE)
+* [MQTT from C# - Part 2](https://youtu.be/uFoyM1bzJts)
+
+---
+
 # Doel
 
 Leren werken met MQTT vanuit C#.
